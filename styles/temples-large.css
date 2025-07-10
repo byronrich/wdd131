@@ -1,0 +1,12 @@
+@media (min-width: 512px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  #hamburger {
+    display: none;
+  }
+}

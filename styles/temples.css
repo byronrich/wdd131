@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 512px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #444;
+  transition: all 0.3s ease;
+}
