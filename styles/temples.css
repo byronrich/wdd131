@@ -1,29 +1,59 @@
+/* Google Font Example */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
 nav {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.5rem;
 }
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: #444;
+}
+
+nav a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
 main {
   max-width: 800px;
   margin: 0 auto;
+  padding: 1rem;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-@media (min-width: 512px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
+
 img {
   width: 100%;
   height: auto;
 }
 
-nav a:hover {
-  color: #fff;
-  background-color: #444;
-  transition: all 0.3s ease;
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
 }

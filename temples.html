@@ -1,25 +1,43 @@
-<header>
-  <h1>Temple Album</h1>
-  <button id="hamburger">&#9776;</button>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Old</a>
-    <a href="#">New</a>
-    <a href="#">Large</a>
-    <a href="#">Small</a>
-  </nav>
-</header>
-<main>
-  <h2>Your Temple Collection</h2>
-  <section class="grid">
-    <!-- Repeat at least 9 figures -->
-    <figure>
-      <img src="path/to/image.jpg" alt="Temple Name">
-      <figcaption>Temple Name</figcaption>
-    </figure>
-  </section>
-</main>
-<footer>
-  <p>&copy; <span id="year"></span> Your Name</p>
-  <p>Last Modified: <span id="lastModified"></span></p>
-</footer>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temple Album</title>
+    <meta name="description" content="A responsive temple album featuring sacred landmarks." />
+    <meta name="author" content="Student Name" />
+    <link rel="stylesheet" href="styles/temples.css" />
+    <link rel="stylesheet" href="styles/temples-large.css" />
+    <script defer src="scripts/temples.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Temple Album</h1>
+      <button id="hamburger">☰</button>
+      <nav id="navigation">
+        <a href="#">Home</a>
+        <a href="#">Old</a>
+        <a href="#">New</a>
+        <a href="#">Large</a>
+        <a href="#">Small</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Sacred Spaces Around the World</h2>
+      <section class="grid">
+        <!-- Repeat this 9 times with optimized images under 125 KB -->
+        <figure>
+          <img src="images/temple1.jpg" alt="Temple Name 1" />
+          <figcaption>Temple Name 1</figcaption>
+        </figure>
+        <!-- ... repeat for temples 2–9 -->
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Student Name</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>

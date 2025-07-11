@@ -1,16 +1,12 @@
-// Hamburger Toggle
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  hamburger.textContent = nav.classList.contains("open") ? "✖" : "☰";
-});
-
-// Footer Dates
+// Dynamically insert year and last modified date
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
-const yearSpan = document.getElementById("year");
-const modSpan = document.getElementById("lastModified");
 
-yearSpan.textContent = new Date().getFullYear();
-modSpan.textContent = document.lastModified;
+// Hamburger functionality
+const hamburger = document.getElementById("hamburger");
+const navigation = document.getElementById("navigation");
+
+hamburger.addEventListener("click", () => {
+  navigation.classList.toggle("open");
+  hamburger.textContent = navigation.classList.contains("open") ? "✖" : "☰";
+});
