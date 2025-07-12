@@ -26,12 +26,42 @@
     <main>
       <h2>Sacred Spaces Around the World</h2>
       <section class="grid">
-        <!-- Repeat this 9 times with optimized images under 125 KB -->
         <figure>
-          <img src="images/temple1.jpg" alt="Temple Name 1" />
-          <figcaption>Temple Name 1</figcaption>
+          <img src="images/saltlakecity1.jpg" alt="Salt Lake City Temple" />
+          <figcaption>Salt Lake City Temple</figcaption>
         </figure>
-        <!-- ... repeat for temples 2–9 -->
+        <figure>
+          <img src="images/drapertemple2.jpg" alt="Draper Temple" />
+          <figcaption>Draper Temple</figcaption>
+        </figure>
+        <figure>
+          <img src="images/monticellotemple3.jpg" alt="Monticello Temple" />
+          <figcaption>Monticello Temple</figcaption>
+        </figure>
+        <figure>
+          <img src="images/anchoragetemple4.jpg" alt="Anchorage Temple" />
+          <figcaption>Anchorage Temple</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mantitemple5.jpg" alt="Manti Temple" />
+          <figcaption>Manti Temple</figcaption>
+        </figure>
+        <figure>
+          <img src="images/provotemple6.jpg" alt="Provo Temple" />
+          <figcaption>Provo Temple</figcaption>
+        </figure>
+        <figure>
+          <img src="images/kirtlandtemple7.jpg" alt="Kirtland Temple" />
+          <figcaption>Kirtland Temple</figcaption>
+        </figure>
+        <figure>
+          <img src="images/vernaltemple8.jpg" alt="Vernal Temple" />
+          <figcaption>Vernal Temple</figcaption>
+        </figure>
+        <figure>
+          <img src="images/logantemple9.jpg" alt="Logan Temple" />
+          <figcaption>Logan Temple</figcaption>
+        </figure>
       </section>
     </main>
 
@@ -39,5 +69,20 @@
       <p>&copy; <span id="year"></span> Student Name</p>
       <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
+
+    <script>
+      // Dynamically insert year and last modified date
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("lastModified").textContent = document.lastModified;
+
+      // Hamburger functionality
+      const hamburger = document.getElementById("hamburger");
+      const navigation = document.getElementById("navigation");
+
+      hamburger.addEventListener("click", () => {
+        navigation.classList.toggle("open");
+        hamburger.textContent = navigation.classList.contains("open") ? "✖" : "☰";
+      });
+    </script>
   </body>
 </html>
