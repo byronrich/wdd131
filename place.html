@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utah, USA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Utah, USA</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/utahlarge.jpg" media="(min-width: 600px)" />
+        <img src="images/utahsmall.jpg" alt="Scenic view of Utah's red rock formations" />
+      </picture>
+    </section>
+
+    <section class="info">
+      <h2>About Utah</h2>
+      <p>Utah is home to five stunning national parks—Arches, Bryce Canyon, Canyonlands, Capitol Reef, and Zion—known collectively as the Mighty Five. From skiing in the Wasatch Mountains to hiking slot canyons, Utah offers year-round adventure and breathtaking landscapes.</p>
+    </section>
+
+    <section class="weather">
+      <h2 class="weather-heading">Weather</h2>
+      <img src="images/weathericon.jpg" alt="Weather icon for mobile view" />
+      <p>Temperature: <span id="temp">79°F</span></p>
+      <p>Wind Speed: <span id="speed">5 mph</span></p>
+      <p id="windchill">Windchill: Loading...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Utah Explorer</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Reset some base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.banner {
+  background-color: #eee;
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Main layout with grid */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+main h2 {
+  grid-column: 1 / span 2;
+  margin: 0;
+}
+
+/* Callout styling */
+.callout {
+  background-color: #702963;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.callout h2 {
+  text-align: left;
+}
+
+/* Contrast fix ensures AA and AAA compliance */
+.callout p {
+  line-height: 1.4;
+}
+
+/* Footer alignment */
+footer {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: left;
+}
