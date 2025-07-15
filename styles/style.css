@@ -45,4 +45,10 @@ header, footer {
   .hero {
     grid-column: span 2;
   }
+
+  .weather {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }
