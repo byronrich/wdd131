@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #212121;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0.5rem;
+}
+
+nav button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0055a5;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+nav button:hover,
+nav button:focus {
+  background-color: #0077cc;
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.temple-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.temple-card h3 {
+  margin-top: 0;
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Optional: Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #eeeeee;
+  }
+
+  header, footer {
+    background-color: #222;
+    color: #eee;
+  }
+
+  .temple-card {
+    background-color: #1e1e1e;
+    color: #ddd;
+  }
+}
