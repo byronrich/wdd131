@@ -64,43 +64,62 @@ const temples = [
   }
 ];
 
-// Display logic
-const templeContainer = document.querySelector("#temple-cards");
-
 function displayTemples(templesList) {
-  templeContainer.innerHTML = ""; // Clear previous entries
-  templesList.forEach(temple => {
+  const container = document.getElementById("temple-cards");
+  container.innerHTML = "";
+
+  templesList.forEach(t => {
     const card = document.createElement("section");
-    const name = document.createElement("h2");
-    const location = document.createElement("p");
-    const dedicated = document.createElement("p");
-    const area = document.createElement("p");
-    const image = document.createElement("img");
+    card.classList.add("temple-card");
+    card.setAttribute("role", "region");
 
-    name.textContent = temple.templeName;
-    location.textContent = `Location: ${temple.location}`;
-    dedicated.textContent = `Dedicated: ${temple.dedicated}`;
-    area.textContent = `Square Footage: ${temple.area.toLocaleString()} sq ft`;
-    image.setAttribute("src", temple.imageUrl);
-    image.setAttribute("alt", `${temple.templeName} Image`);
-    image.setAttribute("loading", "lazy");
+    card.innerHTML = `
+      <h2>${t.templeName}</h2>
+      <p>Location: ${t.location}</p>
+      <p>Dedicated: ${t.dedicated}</p>
+      <p>Square Footage: ${t.area.toLocaleString()} sq ft</p>
+      <img src="${t.imageUrl}" alt="Image of ${t.templeName}" loading="lazy">
+    `;
 
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedicated);
-    card.appendChild(area);
-    card.appendChild(image);
-    templeContainer.appendChild(card);
+    container.appendChild(card);
   });
 }
 
-// Initial display
-displayTemples(temples);
+// Filtering logic
+function filterTemples(type) {
+  let result = [];
 
-// Example filtering: show only temples dedicated before 1900
-function filterHistoricTemples() {
-  const historic = temples.filter(t => parseInt(t.dedicated.split("-")[0]) < 1900);
-  displayTemples(historic);
+  switch (type) {
+    case "old":
+      result = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+      break;
+    case "new":
+      result = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+      break;
+    case "large":
+      result = temples.filter(t => t.area > 90000);
+      break;
+    case "small":
+      result = temples.filter(t => t.area < 10000);
+      break;
+    default:
+      result = temples;
+  }
+
+  displayTemples(result);
 }
 
-// You could call `filterHistoricTemples()` on a button click or page load conditionally
+// Set up navigation link event listeners
+["home", "old", "new", "large", "small"].forEach(id => {
+  document.getElementById(id).addEventListener("click", event => {
+    event.preventDefault();
+    filterTemples(id);
+  });
+});
+
+// Footer metadata
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+
+// Initial render
+displayTemples(temples);

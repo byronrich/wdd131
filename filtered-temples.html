@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A responsive picture album showcasing temples with interactive filters and accessibility-friendly design." />
-  <meta property="og:title" content="Filtered Temples Album" />
-  <meta property="og:description" content="Explore temples with dynamic filtering, responsive design, and optimized performance." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://churchofjesuschrist.org/img/salt-lake-temple.jpg" />
+  <meta name="description" content="Temple Album featuring interactive filters and responsive design" />
+  <meta name="author" content="John Doe" />
+  <meta property="og:title" content="Temple Album Filter Page" />
+  <meta property="og:description" content="Explore and filter temples by historical and architectural categories." />
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
   <link rel="icon" href="favicon.ico" />
-  <title>Filtered Temples</title>
-  <link rel="stylesheet" href="filtered-temples.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <title>Temple Album Filtered</title>
 </head>
 <body>
   <header>
     <h1>Temple Album</h1>
-    <nav role="navigation" aria-label="Temple Filters">
+    <nav aria-label="Page navigation">
       <ul>
-        <li><button id="home">Home</button></li>
-        <li><button id="old">Old</button></li>
-        <li><button id="new">New</button></li>
-        <li><button id="large">Large</button></li>
-        <li><button id="small">Small</button></li>
+        <li><a href="#home" id="home" role="button">Home</a></li>
+        <li><a href="#old" id="old" role="button">Old</a></li>
+        <li><a href="#new" id="new" role="button">New</a></li>
+        <li><a href="#large" id="large" role="button">Large</a></li>
+        <li><a href="#small" id="small" role="button">Small</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div id="temple-cards" class="card-container" aria-live="polite"></div>
+    <section id="temple-cards" aria-live="polite"></section>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span> | Student: John Doe</p>
   </footer>
 
-  <script src="filtered-temples.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
 </body>
 </html>
