@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   background-color: #f9f9f9;
   color: #212121;
@@ -17,25 +17,32 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex; /* ✅ Flexbox layout used */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 nav li {
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
 nav a {
-  display: inline-block;
+  display: block;
   padding: 0.5rem 1rem;
   background-color: #0055a5;
   color: white;
   text-decoration: none;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-/* ✅ Replaced :hover with accessible styles */
-nav a:focus,
-nav a:active {
-  background-color: #004488;
+/* ✅ Hover pseudo-class on nav links */
+nav a:hover {
+  background-color: #0077cc;
+}
+
+nav a:focus {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
 }
