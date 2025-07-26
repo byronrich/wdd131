@@ -15,8 +15,8 @@ header, footer {
 
 nav ul {
   list-style: none;
-  display: block;
   padding: 0;
+  margin: 0;
 }
 
 nav li {
@@ -32,8 +32,11 @@ nav a {
   border-radius: 4px;
 }
 
-nav a:focus {
-  outline: 2px solid #fff;
+/* ✅ Replaced :hover with accessible styles */
+nav a:focus,
+nav a:active {
+  background-color: #004488;
+  outline: 2px solid #ffffff;
   outline-offset: 2px;
 }
 
