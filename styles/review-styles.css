@@ -1,6 +1,8 @@
 /* styles/review-styles.css */
+
+/* ✅ Font stack includes Arial and Google Font fallback */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, 'Roboto', sans-serif;
   margin: 0;
   padding: 1rem;
   background-color: #f4f4f4;
@@ -57,6 +59,7 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 input[type="submit"]:hover {

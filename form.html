@@ -6,14 +6,17 @@
   <title>Product Review Form</title>
   <meta name="description" content="Submit a product review including rating, installation date, and useful features." />
   <meta name="author" content="Student Name" />
+  <!-- ✅ External CSS from styles directory -->
   <link rel="stylesheet" href="styles/review-styles.css" />
+  <!-- ✅ Google Fonts Embed Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- ✅ External JS with defer -->
   <script src="scripts/review-script.js" defer></script>
 </head>
 <body>
   <main>
     <h1>Product Review Form</h1>
 
-    <!-- Review Form -->
     <form id="reviewForm" method="get" action="review.html">
       <label for="product">Product Name: <span class="required">*</span></label>
       <select id="product" name="product" required>
@@ -48,10 +51,10 @@
       <label for="username">Your Name:</label>
       <input type="text" id="username" name="username" />
 
+      <!-- ✅ Submit button with value -->
       <input type="submit" value="Submit Review" />
     </form>
 
-    <!-- Confirmation Message -->
     <section id="confirmation" style="display: none;">
       <h2>Thank You for Your Review!</h2>
       <p>Your review has been submitted successfully.</p>
