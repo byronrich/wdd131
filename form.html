@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Review</title>
-  <link rel="stylesheet" href="css/review-styles.css" />
+  <title>Product Review Form</title>
+  <meta name="description" content="Submit a product review including rating, installation date, and useful features." />
+  <meta name="author" content="Student Name" />
+  <link rel="stylesheet" href="styles/review-styles.css" />
+  <script src="scripts/review-script.js" defer></script>
 </head>
 <body>
   <main>
     <h1>Product Review Form</h1>
 
     <!-- Review Form -->
-    <form id="reviewForm">
+    <form id="reviewForm" method="get" action="review.html">
       <label for="product">Product Name: <span class="required">*</span></label>
       <select id="product" name="product" required>
         <option value="" disabled selected>Select a Product ...</option>
@@ -59,23 +62,5 @@
   <footer>
     <p>&copy; 2025 FutureTech Reviews</p>
   </footer>
-
-  <script src="js/review-script.js"></script>
-  <script>
-    // Handle form submission
-    document.getElementById("reviewForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      // Increment review count
-      let count = localStorage.getItem("reviewCount") || 0;
-      count++;
-      localStorage.setItem("reviewCount", count);
-
-      // Show confirmation
-      document.getElementById("reviewForm").style.display = "none";
-      document.getElementById("reviewCount").textContent = count;
-      document.getElementById("confirmation").style.display = "block";
-    });
-  </script>
 </body>
 </html>
